@@ -1,0 +1,1 @@
+Ini merupakan web pengelolaan nilai untuk aplikasi augmented reality pengenalan otot tubuh manusia menggunakan algoritma fisher-yates shuffle (studi kasus : SDN Parakan)
