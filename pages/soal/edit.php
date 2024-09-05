@@ -1,0 +1,71 @@
+<?php include('../_partials/dashboard-top.php') ?>
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+  <?php include('../_partials/dashboard-sidebar.php'); ?>
+
+ <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+      <?php include('../_partials/dashboard-topbar.php'); ?>
+
+<!-- Begin Page Content -->
+      <div class="container-fluid">
+
+<!-- Page Heading -->       
+<h1 class="h3 mb-0 text-gray-800">Edit Data Soal</h1>
+<br>
+<?php include('data-show.php') ?>
+
+<form action="update.php" method="post">
+<table class="table table-sm table-middle">
+  <tr>
+    <th width="20%">ID Soal</th>
+    <td width="1%">:</td>
+    <td><input type="text" class="form-control" name="id_soal" value="<?php echo $data_soal[0]['id_soal'] ?>" readonly></td>
+  </tr>
+  <tr>
+    <th>Nama Soal</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="nama_soal" value="<?php echo $data_soal[0]['nama_soal'] ?>"></td>
+  </tr>
+  <tr>
+    <th>Jawaban</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="jawaban" value="<?php echo $data_soal[0]['jawaban'] ?>"></td>
+  </tr>
+  <tr>
+    <th>Pilihan A</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="pilihan_a" value="<?php echo $data_soal[0]['pilihan_a'] ?>"></td>
+  </tr>
+  <tr>
+    <th>Pilihan B</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="pilihan_b" value="<?php echo $data_soal[0]['pilihan_b'] ?>"></td>
+  </tr>
+  <tr>
+    <th>Pilihan C</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="pilihan_c" value="<?php echo $data_soal[0]['pilihan_c'] ?>"></td>
+  </tr>
+  <tr>
+    <th>Pilihan D</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="pilihan_d" value="<?php echo $data_soal[0]['pilihan_d'] ?>"></td>
+  </tr>
+</table>
+
+<a href="index.php" class="btn btn-primary btn-lg">
+  <i class="fas fa-arrow-left"></i> Kembali
+</a>
+<button type="submit" class="btn btn-primary btn-lg">
+  <i class="fas fa-save"></i> Simpan
+</button>
+<input type="hidden" name="id_soal" value="<?php echo $data_soal[0]['id_soal'] ?>">
+</form>
+
+<?php include('../_partials/dashboard-footer.php'); ?>
+<?php include('../_partials/dashboard-logout.php'); ?>
+<?php include('../_partials/dashboard-bottom.php') ?>
